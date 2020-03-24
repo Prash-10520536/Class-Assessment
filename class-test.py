@@ -1,6 +1,4 @@
-discCode1 = float[0.5]
-discCode2 = float[0.8]
-discCode3 = float[0.010]
+discount={'discCode1':0.5,'discCode2':0.8,'discCode3':0.10}
 
 class Shopping :
     
@@ -20,8 +18,18 @@ def bill(food):
             
             total = price - discount
             return total
-                
-            
+
+
+
+def priceSort(bList):
+    lowP=len(bList)
+    for i in range(lowP-1):
+        for j in range(lP-1-i):
+            if bList[j] >bList[j+1]:
+                bList[j],bList[j+1]=bList[j+1],bList[j]
+    return bList
+
+print('total', 'priceList')
         
     
     
