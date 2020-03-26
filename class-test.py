@@ -11,3 +11,11 @@ class Shopping :
     def addItems(self, items, quant):        
         trolly[items] = quant
         print(trolly)
+        
+   #getting price with discount
+    def getPrice(self):
+        i=0
+        priceL=[]
+        for k,v in trolly.items():
+            i+=prices[k]*trolly[k]*discounts[k]
+            priceL.append(i)  
