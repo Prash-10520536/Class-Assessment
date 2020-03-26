@@ -1,24 +1,13 @@
-discounts={'discCode1':0.5,'discCode2':0.8,'discCode3':0.10}
+discounts={'rice':0.5,'eggs':0.8,'flour':0.10}
+prices = {"flour": 2, "eggs": 3, "rice": 5} #price
+trolly={}
 
 class Shopping :
     
-    price = {"eggs": 2, "rice": 3, "flour": 5} #price
-    
-    def __init__(self, price):
-        self.total = 0
-        self.price = price
-        self.items = {}
-    
-
-def doBuy():    
-    for price in basket.values():
-        if(price>0) :
-            if(price==2):
-                discount = price*discounts["discCode1"]
-            elif(price==3):
-                discount = price*discounts["discCode2"]
-            elif(price==5):
-                diccount = price*discounts["discCode3"]
-            
-            total = price - discount
-            return total
+    def __init__(self, basket={}):
+        self.__basket = basket
+        
+    #to add items and quants
+    def addItems(self, items, quant):        
+        trolly[items] = quant
+        print(trolly)
