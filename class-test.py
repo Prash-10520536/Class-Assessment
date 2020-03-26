@@ -1,3 +1,4 @@
+#global dictionary
 discounts={'rice':0.5,'eggs':0.8,'flour':0.6} #discount
 prices = {"flour": 2, "eggs": 3, "rice": 5} #price
 
@@ -32,6 +33,7 @@ class Shopping :
                 for j in range(lowP-1-i):
                     if bList[j] >bList[j+1]:
                         bList[j],bList[j+1]=bList[j+1],bList[j]
-                    print("Price highest to lowest ", bList[::-1])
+                            
+        print("Price highest to lowest ", bList[::-1])
         return bList
 
